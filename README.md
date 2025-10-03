@@ -140,10 +140,13 @@ Follow the existing HTML structure and add corresponding CSS styles.
 ### Contact Form Setup
 The contact form is integrated with Formspree for Gmail delivery:
 
-1. **Current Setup**: Formspree endpoint configured for `lawrencesunday311@gmail.com`
-2. **To Change Email**: Update the `action` attribute in the form to your Formspree URL
-3. **Get Formspree Account**: Visit [formspree.io](https://formspree.io) to set up your own forms
-4. **Form Fields**: Name, email, subject, and message fields are properly mapped
+1. **Current Setup**: Formspree endpoint `https://formspree.io/f/meorkwkj`
+2. **Receiving Email**: Messages are forwarded to your registered Gmail address
+3. **To Change Email**: Update the `action` attribute in the form to your new Formspree URL
+4. **Get Formspree Account**: Visit [formspree.io](https://formspree.io) to set up your own forms
+5. **Form Fields**: Name, email, subject, and message fields are properly mapped
+
+**Note**: Make sure to verify your email address in Formspree to start receiving messages.
 
 ## 📄 License
 
