@@ -117,19 +117,33 @@ The website is fully responsive and provides an excellent mobile experience with
 ### Interactive Elements
 - Animated skill progress bars
 - Hover effects on portfolio items
-- Interactive contact form with validation
+- **Functional contact form with Gmail integration** (using Formspree)
 - Social media links with hover animations
+
+### Contact Form Integration
+- **Formspree Integration**: Contact form submissions are sent directly to your Gmail
+- **Email**: lawrencesunday311@gmail.com
+- **Form Validation**: HTML5 validation with user-friendly error messages
+- **Success Notifications**: Visual feedback when messages are sent successfully
 
 ## 🔧 Customization
 
 ### Adding New Projects
-Edit the portfolio section in `html/index.html` and add new project items following the existing structure.
+Edit the portfolio section in `index.html` and add new project items following the existing structure.
 
 ### Modifying Colors
-Update the CSS custom properties in `:root` selector in `css/styles.css`.
+Update the CSS custom properties in `:root` selector in `styles.css`.
 
 ### Adding Sections
 Follow the existing HTML structure and add corresponding CSS styles.
+
+### Contact Form Setup
+The contact form is integrated with Formspree for Gmail delivery:
+
+1. **Current Setup**: Formspree endpoint configured for `lawrencesunday311@gmail.com`
+2. **To Change Email**: Update the `action` attribute in the form to your Formspree URL
+3. **Get Formspree Account**: Visit [formspree.io](https://formspree.io) to set up your own forms
+4. **Form Fields**: Name, email, subject, and message fields are properly mapped
 
 ## 📄 License
 

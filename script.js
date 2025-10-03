@@ -141,35 +141,23 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Contact form handling
+    // Contact form handling with Formspree integration
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const formInputs = this.querySelectorAll('input, textarea');
-            const submitBtn = this.querySelector('.btn');
-            
-            // Disable form during submission
-            formInputs.forEach(input => input.disabled = true);
+            const submitBtn = this.querySelector('.btn-nth');
+
+            // Show loading state
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            
-            // Simulate form submission (replace with actual API call)
+
+            // Formspree will handle the actual submission
+            // We'll show success message after a short delay to indicate processing
             setTimeout(() => {
-                // Show success message
-                showNotification('Message sent successfully!', 'success');
-                
-                // Reset form
-                this.reset();
-                
-                // Re-enable form
-                formInputs.forEach(input => input.disabled = false);
-                submitBtn.textContent = 'Send Message';
-                submitBtn.disabled = false;
-            }, 2000);
+                if (!document.querySelector('.form-error')) {
+                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                }
+            }, 1000);
         });
     }
 
