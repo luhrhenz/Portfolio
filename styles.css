@@ -754,28 +754,100 @@ section {
     gap: 1.5rem;
     flex-wrap: wrap;
 }
-
-.btn.outline {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+.about-actions a{
+    text-decoration: none;
 }
 
+.btn.outline {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    overflow: hidden;
+    transition: background var(--transition-normal), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+
 .btn.outline::before {
-    background: var(--primary-color);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: left var(--transition-normal);
+    z-index: -1;
+}
+
+.btn.outline:hover, .btn.outline:focus {
+    background: var(--gradient-primary);
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: var(--shadow-lg);
+    outline: none;
+}
+
+.btn.outline:hover::before, .btn.outline:focus::before {
+    left: 0;
+}
+
+.btn.outline:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn.secondary {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
     background: transparent;
     border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    overflow: hidden;
+    transition: background var(--transition-normal), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
+
 .btn.secondary::before {
-    background: var(--primary-color);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: left var(--transition-normal);
+    z-index: -1;
+}
+
+.btn.secondary:hover, .btn.secondary:focus {
+    background: var(--gradient-primary);
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: var(--shadow-lg);
+    outline: none;
+}
+
+.btn.secondary:hover::before, .btn.secondary:focus::before {
+    left: 0;
+}
+
+.btn.secondary:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-sm);
 }
 
 .skills-stats {
